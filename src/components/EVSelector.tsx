@@ -47,17 +47,17 @@ const EVSelector = ({ onSelectEV }: EVSelectorProps) => {
   return (
     <div className="grid md:grid-cols-2 gap-6">
       <div className="space-y-2">
-        <label className="text-sm font-medium text-white/80">EV Make</label>
+        <label className="info-label">EV Make</label>
         <Select
           value={selectedMake}
           onValueChange={setSelectedMake}
         >
-          <SelectTrigger className="bg-eco-darker border-eco-light/20 text-white">
+          <SelectTrigger className="bg-eco-darker border-eco-light text-gray-800">
             <SelectValue placeholder="Select make" />
           </SelectTrigger>
-          <SelectContent className="bg-eco-darker text-white border-eco-light/20">
+          <SelectContent className="bg-white text-gray-800 border-eco-light">
             {evMakes.map((make) => (
-              <SelectItem key={make.id} value={make.id} className="hover:bg-eco-light focus:bg-eco-light">
+              <SelectItem key={make.id} value={make.id} className="hover:bg-eco-muted focus:bg-eco-muted">
                 {make.name}
               </SelectItem>
             ))}
@@ -66,18 +66,18 @@ const EVSelector = ({ onSelectEV }: EVSelectorProps) => {
       </div>
 
       <div className="space-y-2">
-        <label className="text-sm font-medium text-white/80">EV Model</label>
+        <label className="info-label">EV Model</label>
         <Select
           value={selectedModel}
           onValueChange={setSelectedModel}
           disabled={!selectedMake}
         >
-          <SelectTrigger className="bg-eco-darker border-eco-light/20 text-white">
+          <SelectTrigger className="bg-eco-darker border-eco-light text-gray-800">
             <SelectValue placeholder={selectedMake ? "Select model" : "Select make first"} />
           </SelectTrigger>
-          <SelectContent className="bg-eco-darker text-white border-eco-light/20">
+          <SelectContent className="bg-white text-gray-800 border-eco-light">
             {availableModels.map((model) => (
-              <SelectItem key={model.id} value={model.id} className="hover:bg-eco-light focus:bg-eco-light">
+              <SelectItem key={model.id} value={model.id} className="hover:bg-eco-muted focus:bg-eco-muted">
                 {model.model}
               </SelectItem>
             ))}

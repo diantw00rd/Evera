@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -95,14 +94,25 @@
 }
 
 .savings-gradient {
-  @apply bg-gradient-to-r from-eco-dark to-eco-accent bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-eco-accent to-eco-dark bg-clip-text text-transparent;
 }
 
 .eco-card {
-  @apply bg-white rounded-xl p-6 border border-eco-light/30 shadow-md;
+  @apply bg-white rounded-xl p-6 border border-eco-light shadow-md;
 }
 
 .form-section {
-  @apply mb-8 border-b border-eco-light/20 pb-6;
+  @apply mb-6 pb-6;
 }
 
+.section-title {
+  @apply text-xl font-semibold text-gray-800 mb-4;
+}
+
+.info-label {
+  @apply text-sm font-medium text-gray-700;
+}
+
+.info-value {
+  @apply font-semibold text-eco-accent;
+}

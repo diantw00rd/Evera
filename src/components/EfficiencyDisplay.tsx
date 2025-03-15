@@ -11,13 +11,13 @@ const EfficiencyDisplay = ({ selectedEV }: EfficiencyDisplayProps) => {
   }
 
   return (
-    <div className="bg-eco-darker border border-eco-light/30 rounded-lg p-4 text-center shadow-sm">
-      <h3 className="text-sm font-medium text-gray-700 mb-1">Est. efficiency</h3>
+    <div className="bg-eco-darker border border-eco-light rounded-lg p-4 text-center shadow-sm">
+      <h3 className="info-label mb-1">Estimated Efficiency</h3>
       <p className="text-2xl font-bold text-eco-accent">
         {selectedEV.efficiency.toFixed(2)} km/kWh
       </p>
       <p className="text-xs text-gray-600 mt-1">
-        Battery: {selectedEV.batteryCapacity} kWh
+        Battery Capacity: {selectedEV.batteryCapacity} kWh
       </p>
     </div>
   );

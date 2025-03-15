@@ -20,76 +20,76 @@ const SavingsCard = ({
   evModel
 }: SavingsCardProps) => {
   return (
-    <div className="eco-card">
-      <div className="text-center mb-8">
-        <h3 className="text-xl font-medium text-white/90 mb-2">
-          Across a year, with off-peak charging you could save:
+    <div className="bg-white rounded-xl shadow-md p-6 border border-eco-light">
+      <div className="text-center mb-6 pb-4 border-b border-eco-light/20">
+        <h3 className="text-xl font-medium text-gray-800 mb-3">
+          Annual Off-Peak Charging Savings
         </h3>
         <div className="mt-4">
-          <span className="text-7xl font-bold savings-gradient">
+          <span className="text-6xl font-bold savings-gradient">
             {formatCurrency(yearlySavings)}
           </span>
           {evModel && (
-            <p className="text-white/70 mt-2">with your {evModel}</p>
+            <p className="text-gray-600 mt-2">with your {evModel}</p>
           )}
         </div>
       </div>
 
-      <div className="grid gap-6">
-        <div className="flex items-center gap-4">
+      <div className="space-y-5">
+        <div className="flex items-center gap-4 p-3 bg-eco-darker rounded-lg">
           <div className="bg-eco-muted p-3 rounded-lg">
-            <Battery className="h-6 w-6 text-eco-accent" />
+            <Battery className="h-5 w-5 text-eco-accent" />
           </div>
           <div>
-            <h4 className="text-white/90 font-medium">Smart Charging bill savings</h4>
+            <h4 className="text-gray-800 font-medium">Charging Cost Savings</h4>
             <div className="flex justify-between mt-1">
-              <span className="text-2xl font-bold savings-gradient">
+              <span className="text-xl font-bold text-eco-accent">
                 {formatCurrency(yearlySavings)}
               </span>
             </div>
             <div className="grid grid-cols-2 gap-2 mt-2 text-sm">
-              <div className="text-white/70">
-                Peak cost: <span className="text-white/90 font-medium">{formatCurrency(totalPeakCost)}</span>
+              <div className="text-gray-600">
+                Peak: <span className="text-gray-800 font-medium">{formatCurrency(totalPeakCost)}</span>
               </div>
-              <div className="text-white/70">
-                Off-peak cost: <span className="text-white/90 font-medium">{formatCurrency(totalOffPeakCost)}</span>
+              <div className="text-gray-600">
+                Off-peak: <span className="text-gray-800 font-medium">{formatCurrency(totalOffPeakCost)}</span>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 p-3 bg-eco-darker rounded-lg">
           <div className="bg-eco-muted p-3 rounded-lg">
-            <Star className="h-6 w-6 text-eco-accent" />
+            <Star className="h-5 w-5 text-eco-accent" />
           </div>
           <div>
-            <h4 className="text-white/90 font-medium">Smart Charging rewards value</h4>
+            <h4 className="text-gray-800 font-medium">Loyalty Rewards Value</h4>
             <div className="flex items-baseline gap-2">
-              <span className="text-2xl font-bold savings-gradient">
+              <span className="text-xl font-bold text-eco-accent">
                 {loyaltyPoints} points
               </span>
-              <span className="text-white/70">
+              <span className="text-gray-600">
                 ≈ {formatCurrency(loyaltyPoints / 10)}
               </span>
             </div>
           </div>
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 p-3 bg-eco-darker rounded-lg">
           <div className="bg-eco-muted p-3 rounded-lg">
-            <Leaf className="h-6 w-6 text-eco-accent" />
+            <Leaf className="h-5 w-5 text-eco-accent" />
           </div>
           <div>
-            <h4 className="text-white/90 font-medium">Carbon savings</h4>
-            <span className="text-2xl font-bold savings-gradient">
-              {co2Reduction.toFixed(0)} kg
+            <h4 className="text-gray-800 font-medium">Carbon Reduction</h4>
+            <span className="text-xl font-bold text-eco-accent">
+              {co2Reduction.toFixed(0)} kg CO₂
             </span>
           </div>
         </div>
       </div>
 
-      <div className="mt-8 text-sm text-white/60 text-center">
-        Savings are calculated against standard peak charging rates
+      <div className="mt-5 pt-2 text-xs text-gray-500 text-center border-t border-eco-light/20">
+        Savings calculated against standard peak charging rates
       </div>
     </div>
   );

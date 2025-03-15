@@ -22,29 +22,29 @@ const ChargingHabitSelector = ({ onSelectHabit }: ChargingHabitSelectorProps) =>
 
   return (
     <div className="space-y-2">
-      <label className="text-sm font-medium text-white/80">
+      <label className="info-label">
         How often do you charge at home?
       </label>
       <Select
         defaultValue="60"
         onValueChange={handleValueChange}
       >
-        <SelectTrigger className="bg-eco-darker border-eco-light/20 text-white">
+        <SelectTrigger className="bg-eco-darker border-eco-light text-gray-800">
           <SelectValue placeholder="Select charging habit" />
         </SelectTrigger>
-        <SelectContent className="bg-eco-darker text-white border-eco-light/20">
+        <SelectContent className="bg-white text-gray-800 border-eco-light">
           {chargingHabits.map((habit) => (
             <SelectItem 
               key={habit.id} 
               value={habit.id}
-              className="hover:bg-eco-light focus:bg-eco-light"
+              className="hover:bg-eco-lighter focus:bg-eco-lighter"
             >
               {habit.label}
             </SelectItem>
           ))}
         </SelectContent>
       </Select>
-      <p className="text-sm text-white/70 italic mt-2">
+      <p className="text-xs text-gray-600 italic mt-2">
         The more you charge at home during off-peak hours, the greater your savings
       </p>
     </div>

@@ -20,7 +20,7 @@ const MileageSlider = ({ onChangeMileage, className }: MileageSliderProps) => {
   return (
     <div className={cn("space-y-4", className)}>
       <div className="flex justify-between items-center">
-        <label className="text-sm font-medium text-gray-700">Annual Mileage</label>
+        <label className="info-label">Annual Mileage</label>
         <span className="text-sm font-semibold text-eco-accent">
           {mileage.toLocaleString()} km
         </span>
@@ -40,7 +40,7 @@ const MileageSlider = ({ onChangeMileage, className }: MileageSliderProps) => {
         <span>50,000 km</span>
       </div>
       
-      <p className="text-sm text-gray-600 italic mt-2">
+      <p className="text-xs text-gray-600 italic mt-2">
         The average Canadian driver covers about 20,000 km per year
       </p>
     </div>
