@@ -90,18 +90,19 @@
   }
 
   body {
-    @apply bg-eco-dark text-white;
+    @apply bg-white text-gray-800;
   }
 }
 
 .savings-gradient {
-  @apply bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-eco-dark to-eco-accent bg-clip-text text-transparent;
 }
 
 .eco-card {
-  @apply bg-eco-darker rounded-xl p-6 border border-eco-light/20;
+  @apply bg-white rounded-xl p-6 border border-eco-light/30 shadow-md;
 }
 
 .form-section {
   @apply mb-8 border-b border-eco-light/20 pb-6;
 }
+
