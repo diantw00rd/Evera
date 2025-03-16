@@ -8,6 +8,7 @@ import ChargingHabitSelector from "@/components/ChargingHabitSelector";
 import SavingsCard from "@/components/SavingsCard";
 import EfficiencyDisplay from "@/components/EfficiencyDisplay";
 import InfoCard from "@/components/InfoCard";
+import Header from "@/components/Header";
 
 const Index = () => {
   const [selectedEV, setSelectedEV] = useState<EVModel | null>(null);
@@ -28,6 +29,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white pb-16">
+      <Header />
       <div className="container mx-auto px-4 md:px-6 py-8">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-10">
